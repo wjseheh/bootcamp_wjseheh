@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <label for="">살고 있는 지역은?</label>
+    <select name="" id="">
+      <option value="02">서울</option>
+      <option value="051">부산</option>
+      <option value="064">제주</option>
+    </select>
+    <br />
+    <select name="" id="" multiple>
+      <option value="02">서울</option>
+      <option value="051">부산</option>
+      <option value="064">제주</option>
+      <!-- 거의안씀 -->
+    </select>
+    <br />
+    <select name="" id="">
+      <option value="male">남자</option>
+      <option value="female">여자</option>
+    </select>
+    <div>
+      <input type="radio" name="rdo_gender" id="male" />
+      <label for="male">남자</label>
+      <input type="radio" name="rdo_gender" id="female" />
+      <label for="female">여자</label>
+    </div>
+    <div>
+      <textarea name="" id="" style="width: 100%" rows="10"></textarea>
+    </div>
+    <div>
+      <fieldset>
+        <legend>기본정보</legend>
+        <div>
+          <label for="name">이름</label>
+          <input type="text" name="" id="name" />
+        </div>
+        <div>
+          <label for="tel">연락처</label>
+          <input type="tel" name="" id="tel" />
+        </div>
+      </fieldset>
+    </div>
+    <div>
+      <fieldset>
+        <legend>학력정보</legend>
+        <div>
+          <label for="university">대학교</label>
+          <input type="text" name="" id="university" />
+        </div>
+        <div>
+          <label for="year">졸업년도</label>
+          <input type="tel" name="" id="year" />
+        </div>
+      </fieldset>
+    </div>
+    <div>
+      <input list="browsers" id="browser1" />
+      <datalist id="browsers">
+        <option value="Internet Explorer">Internet Explorer</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Crome">Crome</option>
+        <option value="Opera">Opera</option>
+        <option value="Safari">Safari</option>
+      </datalist>
+    </div>
+    <div>
+      <input list="browsers" id="browser2" />
+    </div>
+    <!-- datalist 중복사용가능 -->
+  </body>
+</html>
