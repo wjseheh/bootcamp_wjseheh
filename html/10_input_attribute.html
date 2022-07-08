@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="" id="" value="abc" />
+      </div>
+      <div>
+        <input type="text" name="" id="" value="abc" readonly />
+        <!-- 수정불가 -->
+      </div>
+      <div>
+        <input type="text" name="" id="" value="abc" disabled />
+        <!-- form으로 묶었을시 value값 전송안됨 -->
+      </div>
+      <button type="submit">저장</button>
+    </form>
+
+    <div>
+      <input type="text" name="" id="" maxlength="4" />
+      <!-- 4글자까지만 입력가능 -->
+    </div>
+    <div>
+      <input
+        type="tel"
+        name=""
+        id=""
+        style="width: 100%"
+        placeholder="하이프(-)없이 숫자만 입력하세요. 예)00100020003"
+      />
+      <!-- 입력 가이드 -->
+    </div>
+    <div>
+      <form action="">
+        <label for="userid">아이디</label>
+        <input
+          type="text"
+          name="username"
+          id="userid"
+          autocomplete="on"
+          autofocus="on"
+          required
+        />
+        <!-- required = 필수적으로 입력해야함 -->
+        <label for="userid">비밀번호</label>
+        <input type="password" name="" id="userpass" required />
+        <button type="submit">저장</button>
+      </form>
+    </div>
+    <div>
+      <input type="text" name="email" id="" autocomplete="on" />
+    </div>
+    <div>
+      <input type="text" name="phone" id="" autocomplete="on" />
+    </div>
+    <div>
+      <input type="" name="username" id="" autocomplete="on" />
+    </div>
+  </body>
+</html>
