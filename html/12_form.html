@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- action - 데이터를 전송할 주소 -->
+    <!-- method - 데이터를 전송할 방법 -->
+
+    <!-- method 2가지 방식 get,post -->
+
+    <!-- get - 전송하는 데이터가 url에 붙어서 감. 전송하는 데이터가 url에 노출이 됨 -->
+    <!-- 보안에 취약할 수 있음 -->
+    <!-- 페이지 주소를 공유해야할 때 사용 -->
+    <!-- url에 데이터를 붗여서 보내기 때문에 전송할 수 있는 데이터의 크기에 제약이 있음 -->
+
+    <!-- post -->
+    <!-- 전송하는 데이터가 url에 붙지 않음. 사용자 눈에 보이지 않음 -->
+    <!-- 사용자 눈에 보이지 않기 때문에 보안적으로 조금 더 안정적 -->
+    <!-- 결국은 전송하는 데이터를 개발자 도구로 확인할 수 있음 -->
+    <!-- 전송하는 데이터를 암호화하는 것이 좋다. -->
+    <!-- 예를들어 https 프로토콜 사용하면 암호화가 된다. -->
+    <!-- 전송할 수 있는 데이터의 크기에 제약이 없음 -->
+
+    <!-- target - 데이터를 전송할 창을 정함 -->
+    <!-- _self - 현재 창 -->
+    <!-- _blank - 새 창 -->
+    <!-- _parent , _top -->
+
+    <!-- novalidate - form 태그 안의 input 요소의 정합성을 체크하지 않는다. -->
+    <form action="전송할 주소(서버주소)" method="get" target="_self" novalidate>
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" autocomplete="on" />
+      </div>
+      <div>
+        <label for="tel">연락처</label>
+        <input type="tel" name="tel" id="tel" />
+      </div>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <button type="submit">저장</button>
+      <!-- <button type="submit" formnovalidate="formnovalidate">저장</button> -->
+    </form>
+  </body>
+</html>
