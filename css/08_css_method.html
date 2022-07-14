@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      /* .table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .table tr th,
+      .table tr td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      .striped-table tbody tr:nth-child(2n + 1) {
+        background-color: greenyellow;
+      } */
+
+      .table {
+        border: 1px solid black;
+        /* border-collapse: collapse; */
+        width: 300px;
+      }
+      /* css링크와 합쳐지는데 동일한 요소에 세부사항이 바뀌면 인터널이 적용된다. */
+    </style>
+  </head>
+  <body>
+    <!-- css를 적용하는 방법 3가지 -->
+    <!-- 1. inline style : html 시작 태그에 style 속성을 통해 직접 지정 -->
+    <!-- 2. internal css : head 태그 안에 <style> 태그에 스타일을 지정 -->
+    <!-- 3. external css : 별도의 css 파일을 만들고 <head> 태그 안에 css 파일을 삽입해서 사용 -->
+    <a href="" style="text-decoration: none">개발자의품격</a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>000-0000-0000</td>
+          <td>1111@gmail.com</td>
+        </tr>
+        <tr>
+          <td>김종국</td>
+          <td>000-0000-0001</td>
+          <td>2222@gmail.com</td>
+        </tr>
+        <tr>
+          <td>송지효</td>
+          <td>000-0000-0002</td>
+          <td>3333@gmail.com</td>
+        </tr>
+        <tr>
+          <td>양세찬</td>
+          <td>000-0000-0003</td>
+          <td>4444@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table class="table striped-table">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>000-0000-0000</td>
+          <td>1111@gmail.com</td>
+        </tr>
+        <tr>
+          <td>김종국</td>
+          <td>000-0000-0001</td>
+          <td>2222@gmail.com</td>
+        </tr>
+        <tr>
+          <td>송지효</td>
+          <td>000-0000-0002</td>
+          <td>3333@gmail.com</td>
+        </tr>
+        <tr>
+          <td>양세찬</td>
+          <td>000-0000-0003</td>
+          <td>4444@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

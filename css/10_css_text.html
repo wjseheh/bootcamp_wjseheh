@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-left {
+        text-align: left;
+      }
+
+      .text-blue {
+        color: blue;
+      }
+
+      /* 밑줄 */
+      .underline {
+        text-decoration: underline;
+      }
+
+      /* 윗줄 */
+      .overline {
+        text-decoration: overline;
+      }
+
+      /* 취소선 */
+      .delline {
+        text-decoration: line-through;
+      }
+
+      /* 장식선 없음 */
+      .plain {
+        text-decoration: none;
+      }
+
+      /* text-decoration */
+      /* 4가지 하위 프로퍼티 */
+      /* text-decoration-style : 장식선 스타일(직선,점선 등) */
+      /* text-decoration-line : 장식 종류(밑줄,윗줄,가운데줄 등) */
+      /* text-decoration-color : 장식선 색상 */
+      /* text-decoration-thickness : 장식선 두께 */
+
+      .underover {
+        text-decoration: dashed underline overline red 4px;
+        /* text-decoration-style: dashed;
+        text-decoration-line: underline overline;
+        text-decoration-color: red; */
+      }
+
+      /* 모든 알파벳 대문자로 변환 */
+      .uppercase {
+        text-transform: uppercase;
+      }
+
+      /* 모든 알파벳 소문자로 변환 */
+      .lowercase {
+        text-transform: lowercase;
+      }
+
+      /* 영어 문장에서 각 단어의 첫 문자만 대문자로 변환 */
+      .capitalize {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 기본적인 텍스트 관련 스타일링 -->
+    <!-- 텍스트 정렬 -->
+    <h1 class="text-center">가운데 정렬</h1>
+    <h1 class="text-right">오른쪽 정렬</h1>
+
+    <!-- 텍스트 색상 -->
+    <h1 class="text-blue">파란색</h1>
+
+    <!-- 텍스트 장식선 -->
+    <p class="underline">밑줄을 가진 글씨입니다.</p>
+    <p class="overline">윗줄을 가진 글씨입니다.</p>
+    <p class="delline">취소선을 가진 글씨입니다.</p>
+    <p>
+      <a href="" class="plain">a태그의 기본값인 밑줄을 없앤 문장.</a>
+    </p>
+    <p class="underover">윗줄과 밑줄을 가진 글씨</p>
+
+    <!-- 텍스트 변환 -->
+    <p class="uppercase">By doubting we come at the truth.</p>
+    <p class="lowercase">BY Doubting We Come At The Truth.</p>
+    <p class="capitalize">By doubting we come at the truth.</p>
+
+    <!-- css 눈에 보이는 것만 대문자고 자료는 소문자임 -->
+    <input type="text" name="" id="" class="uppercase" />
+    <!-- 자바스크립트 touppercase() -->
+  </body>
+</html>

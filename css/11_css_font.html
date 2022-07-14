@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .font1 {
+        font-family: "courier new", courier, monospace;
+      }
+
+      .font2 {
+        font-family: arial, helvetica, sans-serif;
+      }
+
+      /* 이텔릭체 */
+      .italic {
+        font-style: italic;
+      }
+
+      /* 기본 글씨체를 살짝 기울림 */
+      /* 8-12도 */
+      .oblique {
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 글꼴 스타일링 -->
+    <h1 style="font-family: verdana">verdana 폰트</h1>
+    <h1 style="font-family: courier">courier 폰트</h1>
+    <h1 class="font1">
+      현재 브라우저에 courier new 폰트가 있다면 courier new 폰트 적용 없다면
+      courier 가 적용 그것도 없다면 각 브라우저가 가지고있는 monospace 적용
+    </h1>
+
+    <!-- 폰트 스타일 -->
+    <h1 class="font2">Arial 없으면 > Helvetica 없으면 > sans-serif</h1>
+    <h1 class="italic">이텔릭체로 보여집니다.</h1>
+    <h1 class="oblique">글씨가 기울어져 보입니다.</h1>
+
+    <!-- 폰트 굵기 -->
+    <!-- normal, bold, bolder(상대적인 값), lighter(상대적인 값), 100-900 -->
+
+    <!-- normal: 보통 폰트, 숫자값 400과 동일 -->
+    <p style="font-weight: normal">font-weight:normal</p>
+    <p style="font-weight: 400">font-weight:400</p>
+
+    <!-- bold: 굵은 폰트, 숫자값 700과 동일 -->
+    <p style="font-weight: bold">font-weight:bold</p>
+    <p style="font-weight: 700">font-weight:700</p>
+
+    <!-- bolder : 부모를 기준으로 상대적인 값 -->
+    <div style="font-weight: 100">
+      <p style="font-weight: bolder">부모가 100일때, bolder는 400</p>
+    </div>
+    <div style="font-weight: 200">
+      <p style="font-weight: bolder">부모가 200일때, bolder는 400</p>
+    </div>
+    <div style="font-weight: 300">
+      <p style="font-weight: bolder">부모가 300일때, bolder는 400</p>
+    </div>
+    <div style="font-weight: 400">
+      <p style="font-weight: bolder">부모가 400일때, bolder는 700</p>
+    </div>
+    <div style="font-weight: 500">
+      <p style="font-weight: bolder">부모가 500일때, bolder는 700</p>
+    </div>
+    <div style="font-weight: 600">
+      <p style="font-weight: bolder">부모가 600이상 일때, bolder는 900</p>
+    </div>
+
+    <!-- lighter : 부모를 기준으로 상대적인 값 -->
+    <div style="font-weight: 100">
+      <p style="font-weight: lighter">부모가 100일때, lighter는 100</p>
+    </div>
+    <div style="font-weight: 200">
+      <p style="font-weight: lighter">부모가 200일때, lighter는 100</p>
+    </div>
+    <div style="font-weight: 300">
+      <p style="font-weight: lighter">부모가 300일때, lighter는 100</p>
+    </div>
+    <div style="font-weight: 400">
+      <p style="font-weight: lighter">부모가 400일때, lighter는 100</p>
+    </div>
+    <div style="font-weight: 500">
+      <p style="font-weight: lighter">부모가 500일때, lighter는 100</p>
+    </div>
+    <div style="font-weight: 600">
+      <p style="font-weight: lighter">부모가 600일때, lighter는 400</p>
+    </div>
+    <div style="font-weight: 700">
+      <p style="font-weight: lighter">부모가 700일때, lighter는 400</p>
+    </div>
+    <div style="font-weight: 800">
+      <p style="font-weight: lighter">부모가 800일때, lighter는 700</p>
+    </div>
+    <div style="font-weight: 900">
+      <p style="font-weight: lighter">부모가 900일때, lighter는 700</p>
+    </div>
+
+    <!-- 폰트 크기 -->
+    <!-- 절대 값 : xx-small, x-small, small, medium, large, x-large, xx-large  -->
+    <!-- 상대 값 : larger, smaller -->
+    <!-- 길이 값 : em(부모 요소의 폰트 크기를 기준), rem(루트 요소의 폰트 크기 기준), px, pt(1pt = 0.72인치) -->
+    <!-- 퍼센트(백분율) 값 : 부모 요소의 폰트 크기의 비율 -->
+    <!-- 대부분의 브라우저는 폰트 크기의 기본값으로 12pt = 16px = 1em = 100% -->
+
+    <!-- 부모는 18px -->
+    <!-- 자식은 0.5em -> 9px -->
+
+    <p style="font-size: 10px">font-size:10px</p>
+    <p style="font-size: 8pt">font-size:8pt</p>
+    <p style="font-size: 1em">font-size:16px</p>
+
+    <div style="font-size: 20px">
+      <p style="font-size: 1em">20px</p>
+      <p style="font-size: 0.5em">10px</p>
+      <p style="font-size: 1rem">16px</p>
+    </div>
+
+    <h1 style="font-size: 2em">제목입니다.</h1>
+  </body>
+</html>
