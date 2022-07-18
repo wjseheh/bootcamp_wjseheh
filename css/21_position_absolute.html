@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .relative {
+        position: relative;
+        width: 400px;
+        height: 130px;
+        left: 30px;
+        border: 3px solid green;
+      }
+      .absolute {
+        position: absolute;
+        top: 80px;
+        left: 10px;
+        width: 240px;
+        border: 3px solid red;
+      }
+      .general {
+        width: 350px;
+        border: 3px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- position:absolute; -->
+    <!-- 현재(position:absolute; 가 적용된) html 요소의 부모 요소 중에서 -->
+    <!-- position:relative; 가 설정된 가장 가까운 부모 요소에 대한 상대적인 위치 -->
+    <h2>position:absolute;</h2>
+    <div class="relative">
+      position:relative로 설정된 부모 요소
+      <div class="general">
+        일반(position:static) 요소
+        <div class="absolute">position:absolute로 설정된 요소</div>
+      </div>
+    </div>
+  </body>
+</html>
