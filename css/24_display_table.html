@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .display-table {
+        display: table; /* <table> 요소처럼 표현됨 */
+        width: 100%;
+      }
+
+      .display-tb-header {
+        display: table-header-group; /* <thead> 요소처럼 표현됨 */
+      }
+
+      .display-tb-body {
+        display: table-row-group; /* <tbody> 요소처럼 표현됨 */
+      }
+
+      .display-tb-row {
+        display: table-row; /* <tr> 요소처럼 표현됨 */
+      }
+
+      .display-tb-cell {
+        display: table-cell; /* <td>, <th> 요소처럼 표현됨 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="display-table">
+      <div class="display-tb-header">
+        <div class="display-tb-row">
+          <div class="display-tb-cell">A</div>
+          <div class="display-tb-cell">B</div>
+          <div class="display-tb-cell">C</div>
+        </div>
+      </div>
+      <div class="display-tb-body">
+        <div class="display-tb-row">
+          <div class="display-tb-cell">A1</div>
+          <div class="display-tb-cell">B1</div>
+          <div class="display-tb-cell">C1</div>
+        </div>
+        <div class="display-tb-row">
+          <div class="display-tb-cell">A2</div>
+          <div class="display-tb-cell">B2</div>
+          <div class="display-tb-cell">C2</div>
+        </div>
+        <div class="display-tb-row">
+          <div class="display-tb-cell">A3</div>
+          <div class="display-tb-cell">B3</div>
+          <div class="display-tb-cell">C3</div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <table>
+      <thead>
+        <tr>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A1</td>
+          <td>B1</td>
+          <td>C1</td>
+        </tr>
+        <tr>
+          <td>A2</td>
+          <td>B2</td>
+          <td>C2</td>
+        </tr>
+        <tr>
+          <td>A3</td>
+          <td>B3</td>
+          <td>C3</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

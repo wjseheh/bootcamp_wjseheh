@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        /*x축: 좌에서 우 */
+        flex-direction: row;
+        /*x축: 우에서 좌 */
+        /* flex-direction: row-reverse;  */
+        /*y축: 위에서 아래*/
+        /* flex-direction: column;  */
+        /*y축: 아래에서 위*/
+        /* flex-direction: column-reverse; */
+        flex-wrap: wrap;
+        border: 3px dotted black;
+      }
+      .item {
+        background-color: greenyellow;
+        border: 2px solid blue;
+        width: 150px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+    </div>
+    <script></script>
+  </body>
+</html>

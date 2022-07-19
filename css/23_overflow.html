@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        white-space: nowrap;
+        /* 한줄로쓰겠다 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- overflow -->
+    <!-- html 자식 요소가 부모 요소보다 콘텐츠의 크기가 -->
+    <!-- 더 클 경우 자식 요소를 어떻게 보여줄지를 결정 -->
+    <!-- overflow-x, overflow-y -->
+    <!-- overflow -->
+    <!-- overflow:scroll ->인터넷익스폴로우 같은 브라우저에서 콘텐츠의 길이, 높이에 상관없이 무조건 스크롤바 생김 -->
+    <!-- overflow:auto ->콘텐츠의 길이, 높이가 부모요소를 벗어나지 않는다면 스크롤바가 안보이고 벗어난 순간에 생김 -->
+    <div
+      style="
+        height: 200px;
+        width: 250px;
+        border: 3px solid green;
+        /* overflow-x: scroll; */
+        /* overflow-y: scroll; */
+        overflow: auto;
+        /* auto - 필요할때만 스크롤 생김 */
+      "
+    >
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+      <p>콘텐츠</p>
+    </div>
+  </body>
+</html>
