@@ -23,6 +23,50 @@
       for (const n of numString) {
         console.log(n);
       }
+
+      const drinkList = [
+        {
+          name: "오렌지",
+          price: 1000,
+        },
+        {
+          name: "파워레이드",
+          price: 1400,
+        },
+        {
+          name: "커피",
+          price: 700,
+        },
+        {
+          name: "보리음료",
+          price: 1200,
+        },
+        {
+          name: "코카콜라",
+          price: 1000,
+        },
+      ];
+      // for (const object of drinkList) {
+      //   console.log(object);
+      // }
+
+      // let trTags = "";
+      // for (const drink of drinkList) {
+      //   trTags += "<tr>";
+      //   trTags += "<td>" + drink.name + "</td>";
+      //   trTags += "<td>" + drink.price + "</td>";
+      //   trTags += "</tr>";
+      // }
+
+      let trTags = [];
+      for (const drink of drinkList) {
+        trTags.push("<tr>");
+        trTags.push("<td>" + drink.name + "</td>");
+        trTags.push("<td>" + drink.price + "</td>");
+        trTags.push("</tr>");
+      }
+
+      console.log(trTags);
     </script>
   </body>
 </html>
