@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div>
+      <button onclick="inputCoin(100)">100원 투입</button>
+      <button onclick="inputCoin(500)">500원 투입</button>
+      <button onclick="inputCoin(1000)">1,000원 투입</button>
+    </div>
+
+    <br />
+    <div>
+      <label for="wallet">내지갑</label>
+      <input type="text" id="wallet" value="10000" />
+
+      <label for="inputCoin">투입금액</label>
+      <input type="text" id="inputCoin" value="0" />
+
+      <label for="vendingCoin">자판기 잔액</label>
+      <input type="text" id="vendingCoin" value="1000" />
+    </div>
+
+    <br />
+
+    <div>
+      <button onclick="drinkBtn(1)" disabled id="a1" value="700">
+        코카콜라 (700원)
+      </button>
+
+      <button onclick="drinkBtn(2)" disabled id="a2" value="1200">
+        오렌지 주스 (1200원)
+      </button>
+      <button onclick="drinkBtn(3)" disabled id="a3" value="500">
+        커피 (500원)
+      </button>
+      <button onclick="drinkBtn(4)" disabled id="a4" value="700">
+        물 (700원)
+      </button>
+      <button onclick="drinkBtn(5)" disabled id="a5" value="1200">
+        옥수수수염차 (1200원)
+      </button>
+      <button onclick="drinkBtn(6)" disabled id="a6" value="700">
+        밀키스 (700원)
+      </button>
+      <button onclick="drinkBtn(7)" disabled id="a7" value="1000">
+        트래비 (1000원)
+      </button>
+    </div>
+
+    <div>
+      <textarea name="" id="memo" style="width: 50%" rows="5"> </textarea>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const drinkList = [
+        { number: 1, name: "코카콜라", price: 700, stock: 5 },
+        { number: 2, name: "오렌지 주스", price: 1200, stock: 5 },
+        { number: 3, name: "커피", price: 500, stock: 5 },
+        { number: 4, name: "물", price: 700, stock: 5 },
+        { number: 5, name: "옥수수수염차", price: 1200, stock: 5 },
+        { number: 6, name: "밀키스", price: 700, stock: 5 },
+        { number: 7, name: "트래비", price: 1000, stock: 5 },
+      ];
+
+      function inputCoin(coin) {
+        if (document.querySelector("#wallet").value < coin) {
+          document.querySelector(
+            "#memo"
+          ).innerHTML = `지갑속에 잔액이 부족합니다.`;
+          return;
+        } else {
+          document.querySelector("#inputCoin").value =
+            parseInt(document.querySelector("#inputCoin").value) +
+            parseInt(coin);
+
+          document.querySelector("#vendingCoin").value =
+            parseInt(document.querySelector("#vendingCoin").value) +
+            parseInt(coin);
+
+          document.querySelector("#wallet").value =
+            parseInt(document.querySelector("#wallet").value) - parseInt(coin);
+
+          document.querySelector(
+            "#memo"
+          ).innerHTML = ` 투입하신 금액은 ${coin}원 입니다. \n 총 투입하신 금액은 ${
+            document.querySelector("#inputCoin").value
+          }원 입니다. \n 현재 지갑 속 잔액은 ${
+            document.querySelector("#wallet").value
+          }원 입니다. `;
+
+          availableDrink = drinkList.filter(function (drink) {
+            return drink.price <= document.querySelector("#vendingCoin").value;
+          });
+
+          for (const drink of availableDrink) {
+            document.querySelector(`#a${drink.number}`).disabled = false;
+          }
+        }
+      }
+
+      function drinkBtn(number) {
+        if (drinkList[number - 1].stock > 0) {
+          document.querySelector("#vendingCoin").value =
+            parseInt(document.querySelector("#vendingCoin").value) -
+            parseInt(drinkList[number - 1].price);
+
+          drinkList[number - 1].stock = drinkList[number - 1].stock - 1;
+
+          document.querySelector(
+            "#memo"
+          ).innerHTML = ` 음료가 나옵니다.\n 자판기 잔액은 ${
+            document.querySelector("#vendingCoin").value
+          }원 입니다. `;
+        } else {
+          document.querySelector("#memo").innerHTML = `재고가 부족합니다.`;
+        }
+
+        unAvailableDrink = drinkList.filter(function (drink) {
+          return drink.price >= document.querySelector("#vendingCoin").value;
+        });
+
+        for (const drink of unAvailableDrink) {
+          document.querySelector(`#a${drink.number}`).disabled = true;
+        }
+      }
+    </script>
+  </body>
+</html>

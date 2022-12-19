@@ -28,6 +28,7 @@
       }
 
       console.log(oFood);
+
       let uniqueFoods = [];
       for (const key in oFood) {
         uniqueFoods.push(key);
@@ -50,6 +51,8 @@
       foodSet.forEach(function (food) {
         console.log(food);
       });
+
+      console.log(foodSet);
 
       // 배열에선 내가 찾고자 하는 데이터가 요소로 있는지 찾으려면 for문, if문을 사용.
       for (const food of uniqueFoods) {

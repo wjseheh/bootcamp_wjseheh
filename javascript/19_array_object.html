@@ -12,6 +12,7 @@
     <table>
       <thead>
         <th>음료</th>
+
         <th>가격</th>
       </thead>
       <tbody id="tbBody"></tbody>
@@ -140,7 +141,7 @@
       //   console.log(arr5);
 
       // slice() - 배열의 요소를 잘라내서 배열 형태로 반환
-      console.log(arr4.slice(1, 2));
+      console.log(arr4.slice(1, 3));
 
       // sort() - 배열의 요소를 정렬해주는 함수
       console.log(brands.sort());
@@ -335,6 +336,14 @@
       }, []);
 
       console.log(kims);
+
+      let abb = [1, 2, 3, 4, 5];
+      let kims1 = abb.reduce(function (users1, user) {
+        users1.push(user);
+        return users1;
+      }, []);
+
+      console.log(kims1);
 
       console.log(loadDrinkType());
     </script>

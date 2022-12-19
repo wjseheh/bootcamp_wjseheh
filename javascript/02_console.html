@@ -12,6 +12,47 @@
 
       //   콘솔에 정보를 의도적으로 남길 때 사용
       console.log("hello world!");
+
+      function delay(callback) {
+        callback(new Date());
+      }
+
+      delay((result) => {
+        console.log(result);
+      });
+
+      function f1(callback) {
+        console.log("111");
+        callback();
+      }
+
+      function f2(callback) {
+        console.log("1112213212");
+      }
+
+      // const f1 = (callback) => {
+      //   console.log("1111");
+      //   callback();
+      // };
+
+      // const f2 = (callback) => {
+      //   console.log("1222111");
+      // };
+
+      f1(() => {
+        f2();
+      });
+
+      const words = ["ada", "asdas", "asdasd", "asdasd", "asdasd"];
+
+      function callback(element) {
+        return element.length > 5;
+      }
+      // const result = words.filter((word) => word.length > 5);
+
+      result = words.filter(callback);
+
+      console.log(result);
     </script>
   </body>
 </html>

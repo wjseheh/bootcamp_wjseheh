@@ -22,12 +22,16 @@
 
       // object literal syntax extension
       // Object를 선언하는 시점에 키(key)를 변수명을 사용해서 정의할 수 있음
+
       let type = "studentName";
+
       let score = {
         point: 95,
         [type]: "John",
         // studentName: "John"
       };
+
+      console.log(score.studentName);
 
       // console.log(score.studentName); = "john"
       //   score[type] = "john"

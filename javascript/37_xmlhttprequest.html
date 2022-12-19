@@ -16,7 +16,7 @@
       // 가상의 웹서버 - json-server
       // 클라이언트와 서버가 데이터 통신을 하기 위해서
 
-      // HTTP 통신
+      // HTTP 통신 (기존의 통신방식)
       // 클라이언트가 서버로 요청(request)을 보내면, 서버가 요청에 대한 응답(response)
       // 응답이 오기 전까지는 다른 프로그램을 실행할 수 없었다.
 
@@ -106,6 +106,7 @@
         });
       }
 
+      //then다음 코드작성
       getData("http://localhost:3000/posts").then((res) => {
         console.log(res);
       });
@@ -115,6 +116,7 @@
       });
       console.log("ABC");
 
+      //POST 생성
       function postData() {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "http://localhost:3000/posts");
@@ -132,8 +134,7 @@
         };
       }
 
-      //   postData();
-
+      //PUT 수정
       function putData() {
         const xhr = new XMLHttpRequest();
         xhr.open("PUT", "http://localhost:3000/posts/2");

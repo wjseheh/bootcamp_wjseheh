@@ -24,6 +24,7 @@
 
       class Car {
         constructor(modelName, modelYear, type, price) {
+          //constructor 는 고정
           this.modelName = modelName;
           this.modelYear = modelYear;
           this.type = type;
@@ -65,9 +66,11 @@
 
       const sonata = new Car("소나타", "2022", "G", 35000000);
       console.log(sonata.getModelName());
+      console.log(sonata.modelName);
       console.log(sonata.getPrice());
       sonata.setPrice(36000000);
       console.log(sonata.getPrice());
+      console.log(sonata);
 
       const avante = new Car("아반떼", "2022", "D", 27000000);
       console.log(avante.getModelName());
@@ -100,6 +103,7 @@
 
       const ionic = new ElectricCar("아이오닉", 2022, "E", 40000000, 120, 450);
       console.log(ionic.getModelName());
+      console.log(ionic.getModelYear());
     </script>
   </body>
 </html>
