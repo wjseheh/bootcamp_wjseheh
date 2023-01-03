@@ -39,8 +39,9 @@ app.get("/customer/:id", (req, res) => {
   ];
 
   const customer = customers.filter((c) => c.id === id);
-  if (customer.length > 0) res.status(200).send(customer[0]);
-  else {
+  if (customer.length > 0) {
+    res.status(200).send(customer[0]);
+  } else {
     res.status(401).send({ msg: "존재 하지 않는 ID 입니다." });
   }
 });

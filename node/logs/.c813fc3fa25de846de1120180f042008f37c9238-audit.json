@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\sogoo\\Documents\\GitHub\\bootcamp_wjseheh\\node\\logs\\.c813fc3fa25de846de1120180f042008f37c9238-audit.json",
+    "files": [
+        {
+            "date": 1671612228557,
+            "name": "C:\\Users\\sogoo\\Documents\\GitHub\\bootcamp_wjseheh\\node\\logs\\2022-12-21.log",
+            "hash": "76be495d192a7af42b914b614c2c4d0e72e21311a1f607179b34de49319f1973"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize-cli": "^6.5.2",
+    "socket.io": "^4.5.4",
+    "uuid-apikey": "^1.5.3"
+  }
+}
