@@ -4,7 +4,7 @@ const port = 3000;
 
 // app.get("env");
 
-require("dotenv").config({ path: "mysql/.env" });
+require("dotenv").config({ path: `mysql/.env.${app.get("env")}` });
 
 const mysql = require("./mysql");
 // index.js
