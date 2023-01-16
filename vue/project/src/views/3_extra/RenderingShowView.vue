@@ -2,6 +2,7 @@
   <div>
     <input type="radio" name="" id="ai" value="AI" v-model="favoriteField" />
     <label for="ai">인공지능</label>
+
     <input
       type="radio"
       name=""
@@ -10,8 +11,10 @@
       v-model="favoriteField"
     />
     <label for="blockchain">블록체인</label>
+
     <input type="radio" name="" id="iot" value="IOT" v-model="favoriteField" />
     <label for="iot">사물인터넷</label>
+
     <input
       type="radio"
       name=""

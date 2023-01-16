@@ -46,6 +46,7 @@ export default {
       console.log(this.searchText)
     },
     checkEnter(event) {
+      console.log(event)
       // event.stopPropagation();
       if (event.keyCode === 13) {
         this.doSearch()

@@ -4,9 +4,10 @@ const port = 3000;
 
 // app.get("env");
 
-require("dotenv").config({ path: `mysql/.env.${app.get("env")}` });
+require("dotenv").config({ path: "mysql/.env" });
 
 const mysql = require("./mysql");
+// index.js
 
 app.use(
   express.json({

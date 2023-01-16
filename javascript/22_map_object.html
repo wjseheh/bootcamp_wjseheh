@@ -35,8 +35,9 @@
       console.log(personMap.get("name")); // get함수 key 파라미터
       console.log(personMap.has("email")); // key가 있는지 체크
 
-      personMap.forEach(function (person) {
+      personMap.forEach(function (person, a) {
         console.log(person);
+        console.log(a);
       });
 
       console.log(personMap.size);

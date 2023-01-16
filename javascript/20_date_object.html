@@ -71,6 +71,7 @@
         let now = new Date();
         let dayMilliseconds = 60 * 60 * 24 * 1000;
         let currentMilliseconds = now.getTime();
+        // getTime()는 현재시간의 밀리세컨드를 구해줌
         let intervalDate = currentMilliseconds + day * dayMilliseconds;
         return new Date(intervalDate);
       }
@@ -102,6 +103,7 @@
       console.log(getIntervalDate(7));
 
       const before7days = getIntervalDateFormat(-7, "YYYY-MM-DD");
+      console.log(before7days);
       document.getElementById("startDate").value = before7days;
     </script>
   </body>

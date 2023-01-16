@@ -1,4 +1,5 @@
 // express
+//내장모듈이 아닌 설치가 필요한 모듈
 
 const express = require("express");
 const app = express();

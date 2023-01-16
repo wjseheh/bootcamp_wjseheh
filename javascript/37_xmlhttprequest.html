@@ -45,17 +45,12 @@
             const res = JSON.parse(xhr.response);
             console.log(res);
             // callbackFunc(res);
-
             // 여기에 post 데이터를 가져와서 처리해야 하는 로직을 구현해야 함
             // return res;
           } else {
             console.log(xhr.status, xhr.statusText);
           }
         };
-      }
-
-      function renderPostData(res) {
-        console.log("renderPostData", res);
       }
 
       getPostData();
@@ -114,6 +109,7 @@
       getData("http://localhost:3000/comments").then((res) => {
         console.log(res);
       });
+
       console.log("ABC");
 
       //POST 생성

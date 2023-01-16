@@ -23,22 +23,52 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a
-              class="nav-link active"
+              class="nav-link"
+              :class="{ active: $route.path === '/' }"
               aria-current="page"
               @click="goToMenu('/')"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" @click="goToMenu('/about')">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" @click="goToMenu('/databinding/string')"
-              >String</a
+            <a
+              class="nav-link"
+              :class="{ active: $route.path === '/template/p1/single' }"
+              @click="goToMenu('/template/p1/single')"
+              >SingleViewEdit</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" @click="goToMenu('/databinding/html')">HTML</a>
+            <a
+              class="nav-link"
+              :class="{ active: $route.path === '/template/p2/multiple' }"
+              @click="goToMenu('/template/p2/multiple')"
+              >MultipleEdit</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              :class="{ active: $route.path === '/template/p3/list' }"
+              @click="goToMenu('/template/p3/list')"
+              >ListToDetail</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              :class="{ active: $route.path === '/template/p4/master' }"
+              @click="goToMenu('/template/p4/master')"
+              >MasterDetail</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              :class="{ active: $route.path === '/template/p5/shuttle' }"
+              @click="goToMenu('/template/p5/shuttle')"
+              >Shuttle</a
+            >
           </li>
         </ul>
         <form class="d-flex" role="search">

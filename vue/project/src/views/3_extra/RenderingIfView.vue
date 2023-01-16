@@ -37,7 +37,7 @@ export default {
   components: {},
   data() {
     return {
-      userRole: 'M' // A(Admin) - 관리자, M(Manager) - 매니저, G(General) - 일반사용자
+      userRole: 'A' // A(Admin) - 관리자, M(Manager) - 매니저, G(General) - 일반사용자
     }
   },
   setup() {},

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "json-server": "^0.17.1",
     "mysql2": "^2.3.3",
     "sequelize-cli": "^6.5.2",
     "socket.io": "^4.5.4",

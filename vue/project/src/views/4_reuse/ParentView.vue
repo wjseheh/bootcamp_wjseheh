@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="changeValue" ref="btn">변경</button>
+    <!-- 어떤 요소에도 ref를 넣을수있다 -->
     <child-component
       :str="strParent"
       :num="numParent"

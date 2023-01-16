@@ -7,6 +7,7 @@
         alt="카카오 로그인 버튼"
       />
     </a>
+
     <button class="btn btn-danger" @click="kakaoLogout">카카오 로그아웃</button>
   </div>
 </template>

@@ -9,18 +9,21 @@ import i18nPlugin from './plugins/i18n'
 import en from './i18n/en'
 import ko from './i18n/ko'
 import PageTitle from './components/fragments/PageTitle.vue'
+
 import VueSweetalert2 from 'vue-sweetalert2'
 import 'sweetalert2/dist/sweetalert2.min.css'
-import Loading from 'vue-loading-overlay'
-import 'vue-loading-overlay/dist/css/index.css'
-import VueGoodTablePlugin from 'vue-good-table-next'
 
+import { LoadingPlugin } from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/css/index.css'
+
+import VueGoodTablePlugin from 'vue-good-table-next'
 import 'vue-good-table-next/dist/vue-good-table-next.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
 const i18nStrings = { en, ko }
+// const i18nStrings = { en : en, ko : ko }
 
 const app = createApp(App)
 app.use(store)
@@ -29,7 +32,7 @@ app.mixin(mixin)
 app.component('page-title', PageTitle)
 app.use(i18nPlugin, i18nStrings)
 app.use(VueSweetalert2)
-app.use(Loading)
+app.use(LoadingPlugin)
 app.use(VueGoodTablePlugin)
 
 app.directive('focus', {

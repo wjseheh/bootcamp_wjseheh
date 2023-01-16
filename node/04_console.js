@@ -37,7 +37,10 @@ console.log(obj);
 console.dir(obj, { depth: 1, color: true });
 
 console.time("func 1");
+
 for (let i = 0; i < 999999; i++) {
-  // 특정 코드
+  // 특정 코드(소요시간계산)
 }
+
 console.timeEnd("func 1");
+//사이에 위치한 코드가 실행되는데 걸리는 시간을 계산할 때 사용

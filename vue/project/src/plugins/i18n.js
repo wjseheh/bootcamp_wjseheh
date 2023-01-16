@@ -3,9 +3,9 @@
 export default {
   install: (app, options) => {
     app.config.globalProperties.$translate = (key, params = {}) =>
-      // en.hi => ['en','hi']
       key
         .split('.')
+        // en.hi => ['en','hi']
         .reduce((o, i) => {
           if (o) return o[i]
         }, options)

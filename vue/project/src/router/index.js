@@ -335,6 +335,78 @@ const routes = [
       import(
         /* webpackChunkName: "module", webpackPrefetch:true */ '../views/9_module/VueGoodTableView.vue'
       )
+  },
+  {
+    path: '/template/p1/single',
+    name: 'SingleViewEditView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p1/SingleViewEditView.vue'
+      )
+  },
+  {
+    path: '/template/p2/multiple',
+    name: 'MultipleEditView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p2/MultipleEditView.vue'
+      )
+  },
+  {
+    path: '/template/p3/list',
+    name: 'ListToDetailView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p3/ListToDetailView.vue'
+      )
+  },
+  {
+    path: '/template/p3/detail',
+    name: 'DetailView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p3/DetailView.vue'
+      )
+  },
+  {
+    path: '/template/p3/edit',
+    name: 'EditView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p3/EditView.vue'
+      )
+  },
+  {
+    path: '/template/p3/create',
+    name: 'CreateView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p3/CreateView.vue'
+      )
+  },
+  {
+    path: '/template/p4/master',
+    name: 'MasterDetailView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p4/MasterDetailView.vue'
+      )
+  },
+  {
+    path: '/template/p4/master2',
+    name: 'MasterDetailModalView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p4/MasterDetailModalView.vue'
+      )
+  },
+  {
+    path: '/template/p5/shuttle',
+    name: 'ShuttleView',
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/11_template/p5/ShuttleView.vue'
+      )
   }
 ]
 

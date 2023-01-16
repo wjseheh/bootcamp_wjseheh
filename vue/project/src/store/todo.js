@@ -1,6 +1,6 @@
 export const todo = {
-  // 중앙 데이터 저장소
   namespaced: true,
+  // 중앙 데이터 저장소
   state() {
     return {
       todos: [

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello {{ userName }}</h1>
+    <h1 class="text-red">Hello {{ userName }}</h1>
     <p>{{ message }}</p>
   </div>
 </template>
@@ -17,6 +17,7 @@ export default {
 }
 </script>
 <style scoped>
+/* scoped - 이 페이지 에서만 사용가능 */
 .text-red {
   color: red;
 }

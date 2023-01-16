@@ -1,33 +1,27 @@
 <template>
-  <form @submit.prevent="submit" class="vl-parent" ref="formContainer">
-    <!-- your form inputs goes here-->
-    <label><input type="checkbox" v-model="fullPage" />Full page?</label>
-    <button type="submit">Login</button>
-  </form>
+  <div>
+    <button @click="doSearch">조회</button>
+  </div>
 </template>
-
 <script>
 export default {
+  components: {},
   data() {
     return {
-      fullPage: false
+      sampleData: ''
     }
   },
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
   methods: {
-    submit() {
-      const loader = this.$loading.show({
-        // Optional parameters
-        container: this.fullPage ? null : this.$refs.formContainer,
-        canCancel: true,
-        onCancel: this.onCancel
-      })
+    doSearch() {
+      const loader = this.$loading.show()
       // simulate AJAX
       setTimeout(() => {
         loader.hide()
       }, 5000)
-    },
-    onCancel() {
-      console.log('User cancelled the loader.')
     }
   }
 }
